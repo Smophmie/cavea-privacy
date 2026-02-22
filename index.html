@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de Confidentialité – Cave à Vin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #6B2737;
+      --burgundy-light: #8B3A4D;
+      --cream: #FAF7F2;
+      --warm-gray: #EDE8E0;
+      --text: #2A2017;
+      --text-muted: #7A6E62;
+      --gold: #C4973A;
+      --border: #D8CEBE;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Decorative top band */
+    .top-band {
+      height: 5px;
+      background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--burgundy));
+    }
+
+    header {
+      background: var(--burgundy);
+      color: var(--cream);
+      padding: 60px 40px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .header-ornament {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header h1 span {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .header-sub {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-top: 16px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px auto;
+      opacity: 0.7;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 30px 80px;
+    }
+
+    /* Update notice */
+    .update-notice {
+      background: var(--warm-gray);
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px;
+      margin-bottom: 50px;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .update-notice strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 44px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.05s; }
+    section:nth-child(3) { animation-delay: 0.1s; }
+    section:nth-child(4) { animation-delay: 0.15s; }
+    section:nth-child(5) { animation-delay: 0.2s; }
+    section:nth-child(6) { animation-delay: 0.25s; }
+    section:nth-child(7) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    h2 .num {
+      font-size: 0.75rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: var(--gold);
+      background: var(--warm-gray);
+      padding: 3px 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    strong {
+      font-weight: 500;
+      color: var(--burgundy-light);
+    }
+
+    /* Data list items */
+    .data-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .data-item:first-child { border-top: 1px solid var(--border); }
+
+    .data-item::before {
+      content: '◆';
+      color: var(--gold);
+      font-size: 8px;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .right-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-top: 2px solid var(--burgundy);
+    }
+
+    .right-card strong {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .right-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Contact box */
+    .contact-box {
+      background: var(--burgundy);
+      color: var(--cream);
+      padding: 30px 35px;
+      margin-top: 16px;
+    }
+
+    .contact-box p { color: var(--cream); opacity: 0.85; margin-bottom: 10px; }
+    .contact-box a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(196,151,58,0.4);
+      transition: border-color 0.2s;
+    }
+    .contact-box a:hover { border-color: var(--gold); }
+
+    .cnil-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--warm-gray);
+      border-radius: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: var(--text);
+      color: var(--cream);
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    footer span { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 20px; }
+      main { padding: 40px 20px 60px; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-band"></div>
+
+<header>
+  <div class="header-ornament">Application Mobile</div>
+  <h1>Politique de <span>Confidentialité</span></h1>
+  <div class="divider"></div>
+  <p class="header-sub">Cave à Vin &nbsp;·&nbsp; Sophie Théréau</p>
+</header>
+
+<main>
+
+  <div class="update-notice">
+    <strong>Dernière mise à jour :</strong> <span id="update-date"></span>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span> Responsable du traitement</h2>
+    <p>La présente politique de confidentialité concerne l'application mobile de gestion de cave à vin (ci-après « l'Application »). Le responsable du traitement des données personnelles est :</p>
+    <p><strong>Sophie Théréau</strong> – développeuse indépendante<br>
+    Contact : <a href="mailto:sothereau@gmail.com" style="color:var(--burgundy-light)">sothereau@gmail.com</a></p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Données collectées</h2>
+    <p>Dans le cadre de l'utilisation de l'Application, les données suivantes sont collectées :</p>
+    <div class="data-item"><span><strong>Données d'identification et de connexion</strong> — nom, prénom, adresse e-mail et mot de passe.</span></div>
+    <div class="data-item"><span><strong>Données relatives à votre cave</strong> — informations saisies concernant vos bouteilles de vin (appellation, millésime, quantité, notes personnelles, etc.).</span></div>
+    <p style="margin-top:16px">Aucune autre donnée n'est collectée. L'Application n'accède pas à votre localisation, votre appareil photo, vos contacts ni à d'autres ressources de votre appareil mobile.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Finalité du traitement</h2>
+    <p>Les données collectées sont utilisées exclusivement aux fins suivantes : création et gestion de votre compte utilisateur, authentification sécurisée, stockage et affichage des informations relatives à votre cave à vin, et amélioration du fonctionnement de l'Application.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Base légale</h2>
+    <p>Le traitement de vos données personnelles est fondé sur l'exécution du contrat qui vous lie à l'Application lors de la création de votre compte (article 6.1.b du RGPD). Le traitement des données de votre cave est fondé sur votre consentement explicite, exprimé lors de la saisie de ces données.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Durée de conservation</h2>
+    <p>Vos données sont conservées pendant toute la durée d'utilisation active de votre compte. En cas de suppression de votre compte, l'ensemble de vos données personnelles et données de cave est supprimé dans un délai de <strong>30 jours</strong> suivant votre demande.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Partage des données</h2>
+    <p>Vos données personnelles ne sont pas vendues, louées ni cédées à des tiers. Elles peuvent être transmises à des prestataires techniques strictement nécessaires au fonctionnement de l'Application (hébergement, base de données), lesquels agissent en qualité de sous-traitants et sont soumis aux mêmes obligations de confidentialité.</p>
+    <p>En aucun cas vos données ne sont transmises à des partenaires commerciaux ou à des régies publicitaires.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Sécurité des données</h2>
+    <p>Des mesures techniques et organisationnelles appropriées sont mises en place pour protéger vos données contre tout accès non autorisé, perte, altération ou divulgation. Les mots de passe sont stockés sous forme chiffrée et ne sont jamais lisibles en clair.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span> Vos droits</h2>
+    <p>Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
+    <div class="rights-grid">
+      <div class="right-card"><strong>Accès</strong><p>Obtenir une copie de vos données.</p></div>
+      <div class="right-card"><strong>Rectification</strong><p>Corriger des données inexactes.</p></div>
+      <div class="right-card"><strong>Effacement</strong><p>Demander la suppression de vos données.</p></div>
+      <div class="right-card"><strong>Portabilité</strong><p>Récupérer vos données dans un format structuré.</p></div>
+      <div class="right-card"><strong>Opposition</strong><p>Vous opposer à certains traitements.</p></div>
+    </div>
+    <p class="cnil-note">En cas de réponse insatisfaisante, vous disposez du droit d'introduire une réclamation auprès de la <strong>CNIL</strong> sur <a href="https://www.cnil.fr" target="_blank" style="color:var(--burgundy-light)">www.cnil.fr</a>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span> Mineurs</h2>
+    <p>L'Application est destinée à un public adulte. Elle n'est pas destinée aux personnes mineures. Aucune donnée concernant des mineurs n'est sciemment collectée.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span> Modifications</h2>
+    <p>Cette politique peut être mise à jour ponctuellement afin de refléter des évolutions légales ou des changements dans le fonctionnement de l'Application. La date de dernière mise à jour est indiquée en haut de cette page. En cas de modification substantielle, vous en serez informé via une notification dans l'Application.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">11</span> Contact</h2>
+    <div class="contact-box">
+      <p>Pour toute question relative à cette politique ou à l'utilisation de vos données personnelles :</p>
+      <p><strong style="color:white;font-size:16px">Sophie Théréau</strong></p>
+      <p><a href="mailto:sothereau@gmail.com">sothereau@gmail.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> <span>Sophie Théréau</span> &nbsp;·&nbsp; Cave à Vin
+</footer>
+
+<script>
+  const now = new Date();
+  document.getElementById('update-date').textContent = now.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('year').textContent = now.getFullYear();
+</script>
+
+</body>
+</html>
